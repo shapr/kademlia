@@ -34,4 +34,6 @@ jobs:
       run: stack test
     - name: example
       run: |
-        scripts/discovery-test.sh
+        scripts/discovery-test.sh 0
+        scripts/discovery-test.sh 1
+        scripts/discovery-test.sh 2
