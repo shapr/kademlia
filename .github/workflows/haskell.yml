@@ -22,7 +22,7 @@ jobs:
       with:
        path: |
         ~/.stack
-       key: ${{ runner.os }}-${{ hashFiles('stack.yaml') }}
+       key: ${{ runner.os }}-${{ hashFiles('dfinity-discovery.cabal') }}
 
     - name: build
       run: |
