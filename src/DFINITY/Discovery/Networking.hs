@@ -41,7 +41,7 @@ import           Network.Socket
                  defaultProtocol, getAddrInfo, setSocketOption, socket,
                  withSocketsDo)
 import qualified Network.Socket.ByteString    as S
-import           System.IO.Error              (ioError, userError)
+-- | import           System.IO.Error              (ioError, userError)
 
 import           Data.IP                      (IP)
 import           Network.Socket               (PortNumber)
