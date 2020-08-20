@@ -40,7 +40,7 @@ import           Data.Int                 (Int64)
 import           Data.List                (sortBy)
 import           Data.Word                (Word16, Word8)
 import           GHC.Generics             (Generic)
-import           Network.Socket           (PortNumber (..), SockAddr (..))
+import           Network.Socket           (PortNumber, SockAddr (..))
 
 import           Data.ByteString          (ByteString)
 import qualified Data.ByteString          as BS
