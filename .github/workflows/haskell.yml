@@ -1,0 +1,33 @@
+name: Haskell CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build-test:
+    name: Test on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macOS-latest]
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: timbod7/setup-stack@master
+    - name: Cache multiple paths
+      uses: actions/cache@v2
+      with:
+       path: |
+        ~/.stack
+       key: ${{ runner.os }}-${{ hashFiles('stack.yaml') }}
+
+    - name: build
+      run: |
+        stack init
+        stack build
+        
+    - name: test
+      run: stack test
