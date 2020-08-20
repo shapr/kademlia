@@ -26,6 +26,7 @@ jobs:
 
     - name: build
       run: |
+        rm -r ~/.stack/setup-exe*
         stack init
         stack build
         
