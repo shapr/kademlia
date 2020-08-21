@@ -60,7 +60,7 @@
 -- >             -- Look up the value and it's source
 -- >             res <- I.lookup firstInstance idX
 -- >             case res of
--- >               Just (value, _) -> print $ (show idX) ++  (show value)
+-- >               Just (value, _) -> print $ (show idX) ++ " " ++ (show value)
 -- >               Nothing -> print $ "Not Found Key" ++ (show idX)
 -- >
 -- >         _ -> return ()
