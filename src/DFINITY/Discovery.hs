@@ -43,13 +43,13 @@
 -- >    let valX = Value (C.pack $ "hello world")
 -- >    -- Create the first instance, which will serve as the first node of the
 -- >    -- network
--- >    firstInstance <- create ("127.0.0.1", 1123) ("127.0.0.1", 1123) idA
+-- >    firstInstance <- create (read "127.0.0.1", 1123) (read "127.0.0.1", 1123) idA
 -- >
 -- >    -- Create a Node representing the first instance
--- >    let firstNode = Peer "127.0.0.1" 1123
+-- >    let firstNode = Peer (read "127.0.0.1") 1123
 -- >
 -- >    -- Create the second instance and make it join the network
--- >    secondInstance <- create ("127.0.0.1", 1124) ("127.0.0.1", 1124) idB
+-- >    secondInstance <- create (read "127.0.0.1", 1124) (read "127.0.0.1", 1124) idB
 -- >    joinResult <- I.joinNetwork secondInstance firstNode
 -- >
 -- >    -- Make sure the joining was successful
