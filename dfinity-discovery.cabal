@@ -49,7 +49,7 @@ library
                        DFINITY.Discovery.Signature
 
   build-depends:       base                 >= 4.7 && < 5
-                     , bytestring           >= 0.10.2 && < 0.11
+                     , bytestring
                      , cborg
                      , containers           >= 0.5.5.1
                      , extra                >= 1.4
@@ -87,7 +87,7 @@ test-suite library-test
   build-depends:       dfinity-discovery
                      , base                 >= 4.7 && < 5
                      , binary               >= 0.8.3
-                     , bytestring           >= 0.10.2 && < 0.11
+                     , bytestring
                      , containers           >= 0.5.5.1
                      , data-default         >= 0.7
                      , errors
@@ -118,7 +118,7 @@ executable discovery
   build-depends:       dfinity-discovery
                      , base                 >= 4.7 && < 5
                      , binary               >= 0.8.3
-                     , bytestring           >= 0.10.2 && < 0.11
+                     , bytestring
                      , containers           >= 0.5.5.1
                      , data-default         >= 0.7
                      , extra                >= 1.4
